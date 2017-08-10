@@ -6,12 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="https://github.com/jvining">
-	<meta name="description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Starter Bootstrap Template (http://bit.ly/1SnymWq)">
+	<meta name="description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Starter Bootstrap Template (//bit.ly/1SnymWq)">
 
 	<!-- Bootstrap CDN -->
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
- 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
   	
   	<style>
  		body{background:#fbfbfb; padding-top:5em; font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
@@ -27,8 +27,8 @@
   	</style>
 
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -236,7 +236,7 @@
 					<p>Panel Sorting Demo |  Built with 
 						<a target="_blank" href="http://getbootstrap.com" data-toggle="tooltip" data-placement="top" title="Version: 3.1.0">Bootstrap </a>, 
 						<a target="_blank" href="http://fontawesome.io/" data-toggle="tooltip" data-placement="top" title="Version: 4.1.0">Font Awesome </a>, 
-						<a target="_blank" href="https://jquery.com/" data-toggle="tooltip" data-placement="top" title="Version: 1.7.1">Jquery </a>
+						<a target="_blank" href="http://jquery.com/" data-toggle="tooltip" data-placement="top" title="Version: 1.7.1">Jquery </a>
  					</p>
 	        	</div>
 	    	</div>
@@ -244,22 +244,22 @@
 	</footer>
 
 <!-- JS -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js" type="text/javascript"></script>
 <script>
  	
-	http:// Enable Tool Tips Globally 
+	// Enable Tool Tips Globally 
 	$(function() {
 		$('[data-toggle="tooltip"]').tooltip()
 	})
 	
- 	http:// Dyanmically add the plus/minus toggle to the FAQ headers 
+ 	// Dyanmically add the plus/minus toggle to the FAQ headers 
 	$(document).ready(function() {
 		$('.panel-collapse').has('.panel-body').prev().children('.panel-title').append('<i class="fa fa-plus pull-right"></i> ');
 		$('.panel-collapse').has('in').prev().children('.panel-title').children().removeClass('fa-plus').addClass('fa-minus');
 	});
 	
-	http:// Agenda Panel Show More/Less Toggle
+	// Agenda Panel Show More/Less Toggle
 	$(document).ready(function() {
 		$('#toggle').click(function() {
 			if ($('.panel-collapse').hasClass('in')) {
@@ -274,14 +274,14 @@
 		});
 	});
 	
-	http:// Agenda Single Panel Toggle
+	// Agenda Single Panel Toggle
 	$(document).ready(function() {
 		$('.panel-title').click(function() {
 			$(this).children('i').toggleClass('fa-plus').toggleClass('fa-minus');
 		});
 	});
 	
-	http:// Panel Sorting 
+	// Panel Sorting 
 	$(document).ready(function() {
 	    $('input[type=radio][name=group1]').change(function() {
 	        if (this.value == 'dangerButton') {
