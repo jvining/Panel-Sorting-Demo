@@ -24,7 +24,7 @@
 		.voffset8{margin-top: 8em;}	.voffset9{margin-top: 9em;} .voffsetx{margin-top:10em;}
  		footer{margin: 50px 0;}
 		.panel-group > .panel {margin-bottom:1em;}
-  	</style>
+   	</style>
 
     <!--[if lt IE 9]>
         <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -266,10 +266,12 @@
 				$('.panel-collapse').removeClass('in');
 				$('#toggle').html('+ Expand All Panels');
 				$('.panel-title').children('i').removeClass('fa-minus').addClass('fa-plus');
+				$('panel-collapse.collapse.in').removeAttr("style");
 			} else {
 				$('.panel-collapse').addClass('in');
 				$('#toggle').html('- Collapse All Panels');
 				$('.panel-title').children('i').removeClass('fa-plus').addClass('fa-minus');
+				$('panel-collapse.collapse.in').removeAttr("style");
 			}
 		});
 	});
@@ -285,26 +287,26 @@
 	$(document).ready(function() {
 	    $('input[type=radio][name=group1]').change(function() {
 	        if (this.value == 'dangerButton') {
-				$(".panel-success,.panel-warning,.panel-info,.panel-default,.panel-danger").addClass("hide");
-				$(".panel-danger").removeClass("hide");
+				$("[class*='panel panel-']").addClass("hidden");
+				$(".panel-danger").removeClass("hidden");
 	        }
-	        else if (this.value == 'successButton') {
-				$(".panel-success,.panel-warning,.panel-info,.panel-default,.panel-danger").addClass("hide");
-				$(".panel-success").removeClass("hide");
+	        if (this.value == 'successButton') {
+				$("[class*='panel panel-']").addClass("hidden");
+				$(".panel-success").removeClass("hidden");
 	        }
-	        else if (this.value == 'warningButton') {
-				$(".panel-success,.panel-warning,.panel-info,.panel-default,.panel-danger").addClass("hide");
-				$(".panel-warning").removeClass("hide");
+	         if (this.value == 'warningButton') {
+				$("[class*='panel panel-']").addClass("hidden");
+				$(".panel-warning").removeClass("hidden");
 	        }
-	        else if (this.value == 'infoButton') {
-				$(".panel-success,.panel-warning,.panel-info,.panel-default,.panel-danger").addClass("hide");
-				$(".panel-info").removeClass("hide");
+	        if (this.value == 'infoButton') {
+				$("[class*='panel panel-']").addClass("hidden");
+				$(".panel-info").removeClass("hidden");
 	        }
 	    });
  	});
 	$('#clearAllButton').click(function() {
 		$('input[type=radio][name=group1]').removeAttr('checked');
-		$(".panel-success,.panel-warning,.panel-info,.panel-default,.panel-danger").removeClass("hide");
+		$("[class*='panel-']").removeClass("hidden");
 	});
 	
 </script>
