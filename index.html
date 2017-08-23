@@ -2,34 +2,34 @@
 <html lang="en">
 <head>
 	<title>Panel Sorting Demo</title>
- 	<meta charset="utf-8">
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="https://github.com/jvining">
 	<meta name="description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Starter Bootstrap Template (//bit.ly/1SnymWq)">
-
+	
 	<!-- Bootstrap CDN -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
- 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
-  	
-  	<style>
- 		body{background:#fbfbfb; padding-top:5em; font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	
+	<style>
+		body{background:#fbfbfb; padding-top:5em; font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
 		body > .container{margin-top:20px;}
- 		h1,h2,h3,h4,h5{font-weight:300;}
+		h1,h2,h3,h4,h5{font-weight:300;}
 		[class*="col-"]{color:#5f5f5f;}
- 		.voffset{margin-top: .2em;} .voffset0{margin-top: .5em} .voffset1{margin-top: 1em;}  
+		.voffset{margin-top: .2em;} .voffset0{margin-top: .5em} .voffset1{margin-top: 1em;}  
 		.voffset2{margin-top: 2em;} .voffset3{margin-top: 3em;} .voffset4{margin-top: 4em;} 
 		.voffset5{margin-top: 5em;} .voffset6{margin-top: 6em;} .voffset7{margin-top: 7em;}
 		.voffset8{margin-top: 8em;}	.voffset9{margin-top: 9em;} .voffsetx{margin-top:10em;}
- 		footer{margin: 50px 0;}
+		footer{margin: 50px 0;}
 		.panel-group > .panel {margin-bottom:1em;}
-   	</style>
-
-    <!--[if lt IE 9]>
-        <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	</style>
+	
+	<!--[if lt IE 9]>
+	    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 <body>
@@ -56,170 +56,129 @@
  	</nav>
 
 	<div class="container">
- 		<div class="row">
+		<div class="row">
 			<div class="col-md-12">
-				<a class="btn btn-xs btn-default" id="toggle">+ Expand All Panels</a> &nbsp;
-    			<input type="radio" name="group1" value="dangerButton"> <span class="btn btn-xs btn-danger">Panel-Danger</span> &nbsp;
-    			<input type="radio" name="group1" value="successButton"> <span class="btn btn-xs btn-success">Panel-Success</span> &nbsp;
-    			<input type="radio" name="group1" value="warningButton"> <span class="btn btn-xs btn-warning">Panel-Warning</span> &nbsp;
-    			<input type="radio" name="group1" value="infoButton"> <span class="btn btn-xs btn-info">Panel-info</span> &nbsp;
-    			<a id="clearAllButton" class="btn btn-xs btn-default">See All</a>
-  			</div>
+				<a class="btn btn-xs btn-default" id="toggle">+ Expand All Panels</a> &nbsp; <input name="group1" type="radio" value="dangerButton"> <span class="btn btn-xs btn-danger">Panel-Danger</span> &nbsp; <input name="group1" type="radio" value="successButton"> <span class="btn btn-xs btn-success">Panel-Success</span> &nbsp; <input name="group1" type="radio" value="warningButton"> <span class="btn btn-xs btn-warning">Panel-Warning</span> &nbsp; <input name="group1" type="radio" value="infoButton"> <span class="btn btn-xs btn-info">Panel-info</span> &nbsp; <a class="btn btn-xs btn-default" id="clearAllButton">See All</a>
+			</div>
 			<div class="col-lg-12 voffset3">
 				<div class="panel-group">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-0" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-0" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-0">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-1" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-1" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-1">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-success">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-2" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-2" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-2">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-warning">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-3" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-3" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-3">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-4" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-4" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-4">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-5" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-5" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-5">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-success">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-6" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-6" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-6">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-7" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-7" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-7">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-warning">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-8" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-8" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-8">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-danger">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-9" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-9" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-9">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-info">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-10" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-10" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-10">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
 					<div class="panel panel-success">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-11" data-toggle="collapse">Lorem ipsum dolor sit amet ? </i></h2>
+							<h2 class="panel-title" data-target="#panel-11" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-11">
 							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-								semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean
-								fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor
-								neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
 						</div>
 					</div>
@@ -227,16 +186,16 @@
 			</div>
 		</div>
 	</div>
-
- 	<footer>
+ 
+	<footer>
 		<div class="container">
 	    	<div class="row">
 	        	<div class="col-xs-12">
 					<hr/>
 					<p>Panel Sorting Demo |  Built with 
-						<a target="_blank" href="http://getbootstrap.com" data-toggle="tooltip" data-placement="top" title="Version: 3.1.0">Bootstrap </a>, 
-						<a target="_blank" href="http://fontawesome.io/" data-toggle="tooltip" data-placement="top" title="Version: 4.1.0">Font Awesome </a>, 
-						<a target="_blank" href="http://jquery.com/" data-toggle="tooltip" data-placement="top" title="Version: 1.7.1">Jquery </a>
+						<a target="_blank" href="//getbootstrap.com" data-toggle="tooltip" data-placement="top" title="Version: 3.1.0">Bootstrap </a>, 
+						<a target="_blank" href="//fontawesome.io/" data-toggle="tooltip" data-placement="top" title="Version: 4.1.0">Font Awesome </a>, 
+						<a target="_blank" href="//jquery.com/" data-toggle="tooltip" data-placement="top" title="Version: 1.7.1">Jquery </a>
  					</p>
 	        	</div>
 	    	</div>
@@ -266,13 +225,13 @@
 				$('.panel-collapse').removeClass('in');
 				$('#toggle').html('+ Expand All Panels');
 				$('.panel-title').children('i').removeClass('fa-minus').addClass('fa-plus');
-				$('panel-collapse.collapse.in').removeAttr("style");
-			} else {
+				$('div').attr('style', '');
+ 			} else {
 				$('.panel-collapse').addClass('in');
 				$('#toggle').html('- Collapse All Panels');
 				$('.panel-title').children('i').removeClass('fa-plus').addClass('fa-minus');
-				$('panel-collapse.collapse.in').removeAttr("style");
-			}
+				$('div').attr('style', '');
+ 			}
 		});
 	});
 	
@@ -280,7 +239,7 @@
 	$(document).ready(function() {
 		$('.panel-title').click(function() {
 			$(this).children('i').toggleClass('fa-plus').toggleClass('fa-minus');
-		});
+ 		});
 	});
 	
 	// Panel Sorting 
