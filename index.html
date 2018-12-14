@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Panel Sorting Demo</title>
+	<title>Panel Sorting & Live Search Demo</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="https://github.com/jvining">
-	<meta name="description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Panel Sorting Demo (http://bit.ly/1SnymWq)">
+	<meta name="description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Panel Sorting & Live Search Demo (http://bit.ly/1SnymWq)">
  
 	<!-- Open Graph -->
  	<meta property="og:url" content="https://jvining.github.io/Panel-Sorting-Demo/" />
 	<meta property="og:type" content="Product" />
-	<meta property="og:title" content="Panel Sorting Demo" />
-	<meta property="og:description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Panel Sorting Demo (http://bit.ly/1SnymWq)" />
+	<meta property="og:title" content="Panel Sorting & Live Search Demo" />
+	<meta property="og:description" content="Proof of concept showing that Bootstrap Panels can be manipulated and sorted, built on Panel Sorting & Live Search Demo (http://bit.ly/1SnymWq)" />
 	<meta property="og:image" content="https://placeholdit.co/i/600x315?bg=563d7c&fc=fff&text=Panel%20Sorting%20Demo" />
 
 	<!-- CSS -->
@@ -21,7 +21,7 @@
 	
 	<style>
 		body {background:#fbfbfb; font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";}
-		body > .container {margin-top:5em; min-height:calc(85vh - 10em);}
+		body > .container {margin-top:8em; min-height:calc(90vh - 10em);}
 		body h1, body h2, body h3, body h4, body h5 {font-weight:300;}
 		body [class*="col-"] {font-size:16px; color:#5f5f5f;}
 		body .navbar .nav.navbar-nav{float:right;}
@@ -57,7 +57,7 @@
 		.btn,.btn:hover {transition:.3s ease-in-out;}
 		.bg-lighten {box-shadow:inset 10000px 0 0 rgba(255, 255, 255, .90);}
 		.bg-darken {box-shadow:inset 10000px 0 0 rgba(0, 0, 0, .15);} 
-	</style>
+  	</style>
 
 </head>
 <body>
@@ -71,7 +71,7 @@
  	                <span class="icon-bar"></span>
  	                <span class="icon-bar"></span>
  	            </button>
- 	            <a class="navbar-brand">Panel Sorting Demo</a>
+ 	            <a class="navbar-brand">Panel Sorting & Live Search Demo</a>
  	        </div>
  	        <div class="collapse navbar-collapse" id="navbar-collapse">
  	            <ul class="nav navbar-nav ">
@@ -85,14 +85,29 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<a class="btn btn-xs btn-default" id="toggle">+ Expand All Panels</a> &nbsp; <input name="group1" type="radio" value="dangerButton"> <span class="btn btn-xs btn-danger">Panel-Danger</span> &nbsp; <input name="group1" type="radio" value="successButton"> <span class="btn btn-xs btn-success">Panel-Success</span> &nbsp; <input name="group1" type="radio" value="warningButton"> <span class="btn btn-xs btn-warning">Panel-Warning</span> &nbsp; <input name="group1" type="radio" value="infoButton"> <span class="btn btn-xs btn-info">Panel-info</span> &nbsp; <a class="btn btn-xs btn-default" id="clearAllButton">See All</a>
+			<div class="col-md-8">
+				<ul class="list-unstyled list-inline">
+					<li class="voffset0"><a class="btn btn-sm btn-default" id="toggle">+ Expand All Panels</a> </li>
+					<li class="voffset0"><input name="group1" type="radio" value="dangerButton"> <span class="btn btn-sm btn-danger">Panel-Danger</span> </li>
+					<li class="voffset0"><input name="group1" type="radio" value="successButton"> <span class="btn btn-sm btn-success">Panel-Success</span> </li>
+					<li class="voffset0"><input name="group1" type="radio" value="warningButton"> <span class="btn btn-sm btn-warning">Panel-Warning</span> </li>
+					<li class="voffset0"><input name="group1" type="radio" value="infoButton"> <span class="btn btn-sm btn-info">Panel-info</span></li>
+					<li class="voffset0"><a class="btn btn-sm btn-default" id="clearAllButton">See All</a></li>
+ 				</ul> 
 			</div>
-			<div class="col-lg-12 voffset3">
+			<div class="col-md-4">
+				<div class="input-group voffset0">
+				  <span class="input-group-addon"><i class="fa fa-search"></i></span>
+				  <input type="text" class="search form-control">
+				</div>
+ 			</div>
+ 		</div>
+		<div class="row">
+ 			<div class="col-md-12 voffset3">
 				<div class="panel-group">
-					<div class="panel panel-default">
+					<div class="panel panel-default" data-title="Keynote: Demystifying Computer-Generated Imagery">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-0" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
+							<h2 class="panel-title" data-target="#panel-0" data-toggle="collapse">Keynote: Demystifying Computer-Generated Imagery</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-0">
 							<div class="panel-body">
@@ -100,9 +115,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-danger">
+					<div class="panel panel-danger" data-title="Keynote: How ModCloth Is Leveraging 16 Years Of Data To Bridge Online And Offline Experiences">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-1" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
+							<h2 class="panel-title" data-target="#panel-1" data-toggle="collapse">Keynote: How ModCloth Is Leveraging 16 Years Of Data To Bridge Online And Offline Experiences</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-1">
 							<div class="panel-body">
@@ -110,9 +125,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-success">
+					<div class="panel panel-success" data-title="Keynote: Building A Brand For The Community">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-2" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
+							<h2 class="panel-title" data-target="#panel-2" data-toggle="collapse">Keynote: Building A Brand For The Community</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-2">
 							<div class="panel-body">
@@ -120,9 +135,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-warning">
+					<div class="panel panel-warning" data-title="Keynote Panel Remix: The UX Strategies That Are Driving Your Customers To Buy">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-3" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
+							<h2 class="panel-title" data-target="#panel-3" data-toggle="collapse">Keynote Panel Remix: The UX Strategies That Are Driving Your Customers To Buy</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-3">
 							<div class="panel-body">
@@ -130,81 +145,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="panel panel-info">
+					<div class="panel panel-info" data-title="Keynote: Obsessing Over CX With Machine Learning">
 						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-4" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
+							<h2 class="panel-title" data-target="#panel-4" data-toggle="collapse">Keynote: Obsessing Over CX With Machine Learning</h2>
 						</div>
 						<div class="panel-collapse collapse" id="panel-4">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-danger">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-5" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-5">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-6" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-6">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-7" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-7">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-warning">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-8" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-8">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-danger">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-9" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-9">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-10" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-10">
-							<div class="panel-body">
-								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-							</div>
-						</div>
-					</div>
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<h2 class="panel-title" data-target="#panel-11" data-toggle="collapse">Lorem ipsum dolor sit amet ?</h2>
-						</div>
-						<div class="panel-collapse collapse" id="panel-11">
 							<div class="panel-body">
 								<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 							</div>
@@ -213,13 +158,13 @@
 				</div>
 			</div>
 		</div>
-	</div>
+ 	</div>
  
 	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<p>Panel Sorting Demo &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script></p>
+					<p>Panel Sorting & Live Search Demo &copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script></p>
   				</div>
 				<div class="col-md-4 col-md-offset-4">
 					<ul class="list-unstyled list-inline">
@@ -237,6 +182,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
+	// Enable Tool Tips Globally 
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
 	
  	// Dyanmically add the plus/minus toggle to the FAQ headers 
 	$(document).ready(function() {
@@ -294,6 +243,22 @@
 		$("[class*='panel-']").removeClass("hidden");
 	});
 	
+	// Live Search
+	$(document).ready(function() {
+		$(".search").keyup(function() {
+			var str = $(".search").val();
+			$(".panel").each(function(index) {
+				if ($(this).attr("data-title")) {
+					if (!$(this).attr("data-title").match(new RegExp(str, "i"))) {
+						$(this).fadeOut(50);
+ 					} else {
+						$(this).fadeIn((50));
+ 					}
+				}
+			});
+		});
+	});
+ 	
 </script>
 </body>
 </html>
